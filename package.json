@@ -1,0 +1,16 @@
+{
+  "name": "cli-auth-spike",
+  "version": "1.0.0",
+  "description": "Spike for CLI authentication via browser-based OAuth login",
+  "scripts": {
+    "start": "ts-node src/auth.ts"
+  },
+  "dependencies": {
+    "open": "^10.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}
