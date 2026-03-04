@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Spike for CLI authentication via browser-based OAuth login",
   "scripts": {
-    "start": "ts-node src/auth.ts"
+    "start": "ts-node src/auth.ts",
+    "start:bun": "bun run src/auth-bun.ts"
   },
   "dependencies": {
     "open": "^10.1.0"

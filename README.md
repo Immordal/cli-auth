@@ -16,13 +16,23 @@ Proves that a CLI tool can authenticate a user through the browser and obtain a 
 
 ## Setup
 
+### Node.js
+
 ```bash
 npm install
+npx ts-node src/auth.ts
+```
+
+### Bun
+
+```bash
+bun install
+bun run src/auth-bun.ts
 ```
 
 ## Configuration
 
-Edit the constants at the top of `src/auth.ts`:
+Edit the constants at the top of `src/auth.ts` (Node) or `src/auth-bun.ts` (Bun):
 
 ```typescript
 const BASE_URL = 'http://localhost:8000';       // URL where your app is running
@@ -34,22 +44,9 @@ const CREDENTIALS_DIR = '.your-app';            // Folder name in home directory
 const CREDENTIALS_FILE = '.credentials.json';   // Credentials filename
 ```
 
-## Usage
-
-1. Start your app locally
-2. Fill in the configuration values
-3. Run the spike:
-
-```bash
-npx ts-node src/auth.ts
-```
-
-4. Log in when the browser opens
-5. Check the output — `Test request status: 200` means success
-
 ## Requirements
 
-- Node.js 18+
+- Node.js 18+ or Bun 1.0+
 - A web app that:
   - Uses browser-based OAuth login (Auth0, Google, etc.)
   - Sets a session cookie after login
